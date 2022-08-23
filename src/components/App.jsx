@@ -1,18 +1,26 @@
+import Navbar from "./misc/Navbar";
+import Contact from "./pages/contact/Contact";
+import About from "./pages/about/About";
+import Portfolio from "./pages/portfolio/Portfolio"; 
+import Skills from "./pages/skills/Skills"; 
+
+import "./app.scss";
+
+
 
 export default function App() {
 
   return (
-    <header>
-      <h1>Nasih Nazeem</h1>
-      <nav>
-        <ul>
-          <li><a href="About.jsx">About</a></li>
-          <li><a href="Contact.jsx">Contact</a></li>
-          <li><a href="Portfolio.jsx">Portfolio</a></li>
-          <li><a href="Skills.jsx">Skills</a></li>
-        </ul>
+    <div className="app">
+        <Navbar/>
+      
+      <div className="sections">
+        <About />
+        <Skills />
+        <Portfolio />
+        <Contact />
+      </div>
+    </div>
 
-      </nav>
-    </header>
   );
 }
