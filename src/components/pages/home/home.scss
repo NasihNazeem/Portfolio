@@ -1,3 +1,21 @@
 .home {
-    background-color: lightyellow;
+    background-color: white;
+    display: flex;
+
+    .left {
+        flex: 0.5;
+
+        .imgContainer {
+            width: 700px;
+            height: 700px;
+
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .right {
+        flex: 0.5;
+    }
 }
