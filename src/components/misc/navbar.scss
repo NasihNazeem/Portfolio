@@ -7,18 +7,20 @@
     color: $mainColor;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 3;
+    transition: all 1s ease;
 
     .wrapper {
-        padding: 10px 30px;
+        padding: 17px 30px;
         display: flex;
-        align-items: center;
         justify-content: space-between;
+        align-items: center;
 
-        .left{
+        .left {
             display: flex;
             align-items: center;
-            .logo{
+
+            .logo {
                 font-size: 30px;
                 font-weight: 700;
                 text-decoration: none;
@@ -26,56 +28,67 @@
                 margin-right: 40px;
             }
 
-            .itemContainer{
+            .itemContainer {
                 display: flex;
-                align-items: center;
                 margin-right: 30px;
             }
-            
-            .icon{
+
+            .icon {
                 font-size: 18px;
                 margin-right: 5px;
             }
-            
-            span{
+
+            span {
                 font-size: 15px;
                 font-weight: 500;
             }
         }
 
-        .right{
-            .hamburger{
+        .right {
+            align-items: center;
+
+            .hamburger {
                 display: flex;
                 width: 32px;
                 height: 25px;
                 flex-direction: column;
                 justify-content: space-between;
                 cursor: pointer;
-            
-                span{
+
+                span {
                     width: 100%;
                     height: 3px;
                     background-color: $mainColor;
+                    transform-origin: left;
+                    transition: all 2s ease;
                 }
             }
 
         }
     }
 
-    &.active{
+    &.active {
         background-color: $mainColor;
         color: white;
 
-        .hamburger{
-            span{
-                &:first-child{
+
+        .hamburger {
+            height: 32px;
+            width: 32px;
+
+            span {
+                &:first-child {
                     background-color: white;
+                    transform: rotate(45deg);
                 }
-                &:nth-child(2){
+
+                &:nth-child(2) {
                     opacity: 0;
                 }
-                &:last-child{
+
+                &:last-child {
                     background-color: white;
+                    transform: rotate(-45deg);
                 }
             }
         }
